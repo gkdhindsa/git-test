@@ -6,9 +6,11 @@
   margin: 0;
   padding: 0;
 }
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   background-color: #161616;
@@ -18,6 +20,20 @@ body {
   width: 100vw;
   overflow-y: scroll;
   max-width: 100vw;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: inherit; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #54dcf2; 
 }
 
 a .email{
@@ -103,7 +119,7 @@ h3 {
 
 .button {
   margin-top: 1em;
-  padding: 1rem 5rem;
+  
   background: linear-gradient(266.72deg, rgb(252, 163, 243) 2.79%, #814d7b 124.07%);
   box-shadow: 19px 13px 10px #000000;
   border-radius: 10px;
@@ -112,7 +128,15 @@ h3 {
   border: none;
   letter-spacing: 1px;
   border-radius: 0.5rem;
-  width: 350px;
+  
+}
+
+.button-register{
+  padding: 1rem 5rem;
+}
+.button-brochure{
+  width: 280px;
+  padding: 1rem 1rem;
 }
 
 .button:hover, .button:focus, .button:active, .btn:active, .btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active  {
@@ -225,6 +249,10 @@ h3 {
   padding: 2rem ;
 }
 
+.glide__slide img{
+  padding: 1rem;
+}
+
 .glide__arrow--left{
   transform: translateX(-8vw);
 }
@@ -273,15 +301,6 @@ h3 {
   font-size: 1rem;
 }
 
-.btn-submit {
-  display: inline-block;
-  padding: 0.5rem 2rem;
-  margin-left: 1rem;
-  background: linear-gradient(266.51deg, #54DCF2 2.78%, #2A727D 137.53%);
-  border-radius: 10px;
-  box-shadow: none;
-  height: inherit;
-}
 .form-container{
   padding: 0;
 }
@@ -323,6 +342,9 @@ h3 {
   text-align:right;
 }
 
+.social-image{
+  height: 3rem;
+}
 
 
 @media (max-width: 992px) {
@@ -403,9 +425,6 @@ h3 {
     padding: 10vh 5vw;
   }
 
-  .btn-submit {
-    max-width: 40%;
-  }
 
   .hr-about {
     width: 70%;
@@ -442,9 +461,7 @@ h3 {
     font-size: 2.5rem;
   }
   
-  .btn-submit, .notify input{
-    padding: 0.5rem ;
-  }
+ 
   .button{
     width: 100%;
   }
@@ -466,9 +483,7 @@ h3 {
   .btn{
     font-size: 1rem;
   }
-  .contact-inner{
-    text-align: left;
-  }
+  
   .container-bottom{
     margin-bottom: 10vh;
   }
@@ -480,9 +495,7 @@ h3 {
     width: 100%;
     padding: 0.5rem;
   }
-  .contact-inner{
-    text-align: left;
-  }
+  
   .container-bottom{
     margin-bottom: 10vh;
   }

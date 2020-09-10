@@ -26,9 +26,10 @@ $(document).ready(function(){
 
     new Glide('.glide', config).mount()
 
-document.body.scrollLeft=0;
+
 
 function setToggle(){
+  document.body.scrollLeft=0;
   
   let items=document.querySelectorAll('.nav-item')
   
